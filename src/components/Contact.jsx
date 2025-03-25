@@ -12,10 +12,10 @@ export default function ContactForm() {
 
     emailjs
       .sendForm(
-        'service_jqgk4u7',     // reemplaza con tu ID
-        'template_07l8t5q',    // reemplaza con tu ID
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        'mhcwP3jTD6V6oRO60'      // reemplaza con tu key pública
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(() => {
         setLoading(false);
@@ -40,7 +40,11 @@ export default function ContactForm() {
           <p className="mt-2 text-gray-700">Nos pondremos en contacto en menos de 24h.</p>
         </div>
       ) : (
-        <form ref={formRef} onSubmit={sendEmail} className="max-w-xl mx-auto space-y-6 bg-gray-50 p-6 rounded-xl shadow">
+        <form
+          ref={formRef}
+          onSubmit={sendEmail}
+          className="max-w-xl mx-auto space-y-6 bg-gray-50 p-6 rounded-xl shadow"
+        >
           <div>
             <label htmlFor="user_name" className="block text-sm font-medium text-gray-700">Nombre</label>
             <input

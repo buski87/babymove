@@ -13,7 +13,7 @@ export default function ProductSection() {
       </div>
 
       {/* Grid de productos */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
         {products.map((product) => (
           <div key={product.id} className="text-left bg-white shadow-md p-4 rounded-lg">
             <Link to={`/producto/${product.id}`}>
