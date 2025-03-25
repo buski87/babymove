@@ -29,8 +29,8 @@ export default function ProductDetail() {
   }
 
   return (
-    <div className="p-6 max-w-5xl mx-auto flex flex-col items-center">
-      <div className="flex flex-col md:flex-row gap-8 w-full justify-center items-center text-center md:text-left">
+    <div className="min-h-[calc(100vh-100px)] flex justify-center items-center px-6 py-10">
+       <div className="max-w-5xl w-full flex flex-col md:flex-row gap-8 justify-center items-center text-center md:text-left">
         <img
           src={product.image}
           alt={product.name}
