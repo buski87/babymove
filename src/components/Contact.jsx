@@ -16,7 +16,6 @@ export default function ContactForm() {
       publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
     });
 
-
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -53,22 +52,22 @@ export default function ContactForm() {
           className="max-w-xl mx-auto space-y-6 bg-gray-50 p-6 rounded-xl shadow"
         >
           <div>
-            <label htmlFor="user_name" className="block text-sm font-medium text-gray-700">Nombre</label>
+            <label htmlFor="from_name" className="block text-sm font-medium text-gray-700">Nombre</label>
             <input
               type="text"
-              name="user_name"
-              id="user_name"
+              name="from_name"
+              id="from_name"
               required
               className="mt-1 w-full border border-gray-300 rounded px-3 py-2"
             />
           </div>
 
           <div>
-            <label htmlFor="user_email" className="block text-sm font-medium text-gray-700">Correo electrónico</label>
+            <label htmlFor="reply_to" className="block text-sm font-medium text-gray-700">Correo electrónico</label>
             <input
               type="email"
-              name="user_email"
-              id="user_email"
+              name="reply_to"
+              id="reply_to"
               required
               className="mt-1 w-full border border-gray-300 rounded px-3 py-2"
             />
