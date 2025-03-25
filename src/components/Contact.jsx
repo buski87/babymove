@@ -10,6 +10,12 @@ export default function ContactForm() {
     e.preventDefault();
     setLoading(true);
 
+    console.log("🔍 ENV values:", {
+      service: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      template: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+    });
+
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
