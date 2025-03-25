@@ -16,6 +16,7 @@ export default function ContactForm() {
       publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
     });
 
+
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
