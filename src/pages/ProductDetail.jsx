@@ -29,8 +29,8 @@ export default function ProductDetail() {
   }
 
   return (
-    <div className="p-6 max-w-4xl mx-auto">
-      <div className="flex flex-col md:flex-row gap-8">
+    <div className="p-6 max-w-5xl mx-auto flex flex-col items-center">
+      <div className="flex flex-col md:flex-row gap-8 w-full justify-center items-center text-center md:text-left">
         <img
           src={product.image}
           alt={product.name}

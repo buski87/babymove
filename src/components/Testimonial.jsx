@@ -1,20 +1,28 @@
+import user1 from '../assets/testimonios/user1.webp';
+import user2 from '../assets/testimonios/user2.webp';
+import user3 from '../assets/testimonios/user3.webp';
+
 const testimonials = [
-    {
-      name: 'Laura M.',
-      message: 'El carrito es precioso y súper ligero. ¡Mi bebé va encantado!',
-      image: '/src/assets/client1.webp',
-    },
-    {
-      name: 'Carlos G.',
-      message: 'Muy fácil de plegar y cabe perfecto en el maletero. Lo recomiendo.',
-      image: '/src/assets/client2.webp',
-    },
-    {
-      name: 'Marta S.',
-      message: 'Excelente calidad y el envío fue rapidísimo. Muy satisfechos.',
-      image: '/src/assets/client3.webp',
-    },
-  ];
+  {
+    name: 'Laura Martínez',
+    role: 'Mamá primeriza',
+    comment: 'El carrito llegó rápido, se nota la calidad en los materiales.',
+    image: user1,
+  },
+  {
+    name: 'Ana Pérez',
+    role: 'Madre de dos',
+    comment: 'Buscaba seguridad y comodidad, y este carrito lo tiene todo.',
+    image: user2,
+  },
+  {
+    name: 'Carlos Gómez',
+    role: 'Papá moderno',
+    comment: 'Fácil de montar y súper ligero, ideal para ciudad.',
+    image: user3,
+  },
+];
+
   
   export default function TestimonialsSection() {
     return (
