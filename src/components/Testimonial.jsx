@@ -1,6 +1,6 @@
-import client1 from '../assets/testimonios/client1.webp';
-import client2 from '../assets/testimonios/client2.webp';
-import client3 from '../assets/testimonios/client3.webp';
+import client1 from '../assets/client1.webp';
+import client2 from '../assets/client2.webp';
+import client3 from '../assets/client3.webp';
 
 const testimonials = [
   {
