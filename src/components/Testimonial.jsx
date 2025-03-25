@@ -1,25 +1,25 @@
-import user1 from '../assets/testimonios/user1.webp';
-import user2 from '../assets/testimonios/user2.webp';
-import user3 from '../assets/testimonios/user3.webp';
+import client1 from '../assets/testimonios/client1.webp';
+import client2 from '../assets/testimonios/client2.webp';
+import client3 from '../assets/testimonios/client3.webp';
 
 const testimonials = [
   {
     name: 'Laura Martínez',
     role: 'Mamá primeriza',
     comment: 'El carrito llegó rápido, se nota la calidad en los materiales.',
-    image: user1,
+    image: client1,
   },
   {
     name: 'Ana Pérez',
     role: 'Madre de dos',
     comment: 'Buscaba seguridad y comodidad, y este carrito lo tiene todo.',
-    image: user2,
+    image: client2,
   },
   {
     name: 'Carlos Gómez',
     role: 'Papá moderno',
     comment: 'Fácil de montar y súper ligero, ideal para ciudad.',
-    image: user3,
+    image: client3,
   },
 ];
 
