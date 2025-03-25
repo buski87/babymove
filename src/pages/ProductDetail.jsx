@@ -10,7 +10,7 @@ export default function ProductDetail() {
   const product = products.find((p) => p.id === Number(id));
 
   const handleBackToCatalog = () => {
-    localStorage.setItem('scrollToProductos', 'true'); // ✅ importante
+    localStorage.setItem('scrollToProductos', 'true');
     navigate('/');
   };
 
@@ -30,58 +30,58 @@ export default function ProductDetail() {
 
   return (
     <div className="min-h-[calc(100vh-100px)] flex justify-center items-center px-6 py-10">
-       <div className="max-w-5xl w-full flex flex-col md:flex-row gap-8 justify-center items-center text-center md:text-left">
-        <img
-          src={product.image}
-          alt={product.name}
-          className="w-full md:w-1/2 object-cover rounded-lg"
-        />
+      <div className="max-w-5xl w-full flex flex-col items-center">
+        <div className="flex flex-col md:flex-row gap-8 w-full justify-center items-center text-center md:text-left">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full md:w-1/2 object-cover rounded-lg"
+          />
 
-        <div className="flex-1 space-y-4">
-          <h1 className="text-3xl font-bold">{product.name}</h1>
-          <p className="text-lg text-gray-700">{product.price}€</p>
-          {product.extra && (
-            <span className="inline-block bg-green-100 text-green-700 text-sm px-3 py-1 rounded">
-              {product.extra}
-            </span>
-          )}
+          <div className="flex-1 space-y-4">
+            <h1 className="text-3xl font-bold">{product.name}</h1>
+            <p className="text-lg text-gray-700">{product.price}€</p>
+            {product.extra && (
+              <span className="inline-block bg-green-100 text-green-700 text-sm px-3 py-1 rounded">
+                {product.extra}
+              </span>
+            )}
 
-          {/* Descripción */}
-          {product.description && (
-            <div>
-              <h3 className="font-semibold text-gray-800 mt-4">Descripción:</h3>
-              <p className="text-gray-600">{product.description}</p>
-            </div>
-          )}
+            {product.description && (
+              <div>
+                <h3 className="font-semibold text-gray-800 mt-4">Descripción:</h3>
+                <p className="text-gray-600">{product.description}</p>
+              </div>
+            )}
 
-          {/* Accesorios */}
-          {product.accessories && (
-            <div>
-              <h3 className="font-semibold text-gray-800 mt-4">Accesorios incluidos:</h3>
-              <ul className="list-disc list-inside text-gray-600">
-                {product.accessories.map((acc, i) => (
-                  <li key={i}>{acc}</li>
-                ))}
-              </ul>
-            </div>
-          )}
+            {product.accessories && (
+              <div>
+                <h3 className="font-semibold text-gray-800 mt-4">Accesorios incluidos:</h3>
+                <ul className="list-disc list-inside text-gray-600">
+                  {product.accessories.map((acc, i) => (
+                    <li key={i}>{acc}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
+            <button
+              onClick={() => addToCart(product)}
+              className="mt-6 bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition"
+            >
+              Añadir al carrito
+            </button>
+          </div>
+        </div>
+
+        <div className="mt-10 text-center">
           <button
-            onClick={() => addToCart(product)}
-            className="mt-6 bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition"
+            onClick={handleBackToCatalog}
+            className="text-blue-500 hover:underline"
           >
-            Añadir al carrito
+            ← Volver al catálogo
           </button>
         </div>
-      </div>
-
-      <div className="mt-10 text-center">
-        <button
-          onClick={handleBackToCatalog}
-          className="text-blue-500 hover:underline"
-        >
-          ← Volver al catálogo
-        </button>
       </div>
     </div>
   );
